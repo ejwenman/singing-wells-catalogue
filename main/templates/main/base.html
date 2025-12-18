@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singing Wells Archive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer scr="http://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="bg-gray-950">
+
+    <!-- Header -->
+    <header class="bg-gray-950 text-white py-6 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <h1 class="text-3xl font-bold">Singing Wells Archive</h1>
+            <p class="text-blue-100 mt-2">Explore traditional East African music</p>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-4 py-8">
+
+        <!-- Filter section -->
+        <div class="py-3 text-gray-200 text-center uppercase text-sm">
+            <h2>Filter</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+
+            <!-- Instruments -->
+            <div>
+                <div id="openInstruments"
+                    class="max-w-48 border border-gray-500 rounded-lg bg-gray-950 px-3 py-2 text-gray-400 text-sm">
+                    Instruments
+                </div>
+
+                <div id="instrumentFilterContainer"
+                    class="filter-container max-w-48 rounded-lg border border-gray-500 bg-gray-50 px-3 py-2 text-gray-500 text-sm hidden">
+                    {% for instrument in instruments %}
+                    <div>
+                        <input type="checkbox" class="filter-checkbox" id="{{ instrument }}Filter"
+                            name="{{ instrument }}Filter" data-filter-type="instrument"
+                            data-filter-value="{{ instrument }}">
+                        <label for="{{ instrument }}Filter">{{ instrument }}</label>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Field Trips -->
+            <div>
+                <div id="openTrips"
+                    class="max-w-48 border border-gray-500 rounded-lg bg-gray-950 px-3 py-2 text-gray-400 text-sm">
+                    Field Trips
+                </div>
+                <div id="tripFilterContainer"
+                    class="filter-container max-w-48 rounded-lg border border-gray-500 bg-gray-50 px-3 py-2 text-gray-500 text-sm hidden">
+                    {% for trip in trips %}
+                    <div>
+                        <input type="checkbox" class="filter-checkbox" id="{{ trip }}Filter" name="{{ trip }}Filter"
+                            data-filter-type="fieldTrip" data-filter-value="{{ trip }}">
+                        <label for="{{ trip }}Filter">{{ trip }}</label>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Groups -->
+            <div>
+                <div id="openGroups"
+                    class="max-w-48 border border-gray-500 rounded-lg bg-gray-950 px-3 py-2 text-gray-400 text-sm">
+                    Groups
+                </div>
+                <div id="groupFilterContainer"
+                    class="filter-container max-w-48 rounded-lg border border-gray-500 bg-gray-50 px-3 py-2 text-gray-500 text-sm hidden">
+                    {% for group in groups %}
+                    <div>
+                        <input type="checkbox" class="filter-checkbox" id="{{ group }}Filter" name="{{ group }}Filter"
+                            data-filter-type="group" data-filter-value="{{ group }}">
+                        <label for="{{ group }}Filter">{{ group }}</label>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Table Section -->
+        <div class="overflow-x-auto py-3">
+            <div class="bg-gray-600/25 rounded-lg">
+                <table class="min-w-full text-left text-sm border-collapse text-gray-400">
+                    <thead>
+                        <tr class="border-b border-gray-500 text-gray-300">
+                            <th class="p-4 w-1/6">Songs</th>
+                            <th class="p-4 w-1/6">Group</th>
+                            <th class="p-4 w-1/6">Location</th>
+                            <th class="p-4 w-1/6">Instruments</th>
+                            <th class="p-4 w-1/6">Audio FIle</th>
+                            <th class="p-4 w-1/6">Video Link</th>
+                        </tr>
+                    </thead>
+                    <tbody id="songs-table-body">
+                        <!-- Javascript inserts song rows here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Arrows and page number -->
+            <div class="flex justify-center items-center gap-4 mt-6 mb-8 text-gray-400 text-sm">
+                <button id="pageLeft">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="size-6">
+                        <path fill-rule="evenodd"
+                            d="M11.03 3.97a.75.75 0 0 1 0 1.06l-6.22 6.22H21a.75.75 0 0 1 0 1.5H4.81l6.22 6.22a.75.75 0 1 1-1.06 1.06l-7.5-7.5a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 0 1 1.06 0Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <div>
+                    <span id="page-info">OVERWRITTEN BY JAVASCRIPT</span>
+                </div>
+                <button id="pageRight">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="size-6 fill">
+                        <path fill-rule="evenodd"
+                            d="M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
+
+<script>
+
+    //=====================
+    // HIDE/SHOW CONTAINERS
+    //=====================
+
+    // open containers
+    function hideShow(element) {
+        element.classList.toggle('hidden');
+    }
+
+    const buttonToContainer = {
+        openInstruments: document.getElementById('instrumentFilterContainer'),
+        openTrips: document.getElementById('tripFilterContainer'),
+        openGroups: document.getElementById('groupFilterContainer'),
+    }
+
+    for (buttonId in buttonToContainer) {
+        const button = document.getElementById(buttonId);
+        setupButtonListener(button, buttonId);
+        setupContainerListener(buttonId);
+    }
+
+    function setupButtonListener(button, buttonId) {
+        button.addEventListener('click', function (event) {
+            event.stopPropagation();
+            hideShow(buttonToContainer[buttonId]);
+        })
+    }
+    // protect click within container
+    function setupContainerListener(buttonId) {
+        buttonToContainer[buttonId].addEventListener('click', function (event) {
+            event.stopPropagation();
+        })
+    }
+
+    // hide containers on click outside
+    const filterContainers = document.querySelectorAll('.filter-container');
+    const body = document.body;
+
+    body.addEventListener('click', function () {
+        anywhereHide(filterContainers);
+    })
+
+    function anywhereHide(elements) {
+        for (element of elements) {
+            if (!element.classList.contains('hidden')) {
+                element.classList.add('hidden');
+            }
+        }
+    }
+
+    // ====================
+    // QUERY - USER ACTIONS
+    // ====================
+
+    let pageCounter = 1;
+    let pageTotal = 3;
+    pageInfoElement = document.getElementById('page-info');
+    pageLeft = document.getElementById('pageLeft');
+    pageRight = document.getElementById('pageRight');
+
+    pageLeft.addEventListener('click', async function () {
+        if (pageCounter > 1) {
+            pageCounter -= 1;
+            loadSongs()
+        }
+    })
+
+    pageRight.addEventListener('click', async function () {
+        if (pageCounter < pageTotal) {
+            pageCounter += 1;
+            loadSongs()
+        }
+    })
+
+    const checkboxes = document.querySelectorAll('.filter-checkbox');
+    for (const checkbox of checkboxes) {
+        checkbox.addEventListener('change', async function () {
+            // reset to first page each time the filter is changed
+            pageCounter = 1;
+            loadSongs()
+        })
+    }
+
+    async function loadSongs() {
+        const url = buildApiUrl();
+        try {
+            const data = await fetchData(url);
+            tableUpdate(data.songs);
+            pageTotal = data.pages;
+            pageInfoElement.textContent = `Page ${pageCounter} of ${pageTotal}`;
+        } catch (error) {
+            console.log('Could not fetch data.', error);
+            errorInTable(error);
+            pageTotal = 1;
+            pageInfoElement.textContent = `Page ${pageCounter} of ${pageTotal}`;
+        }
+    }
+
+    // ==============================
+    // QUERY - API URL & JSON UPDATE
+    // ==============================
+
+    function buildApiUrl() {
+        const params = []
+        for (const checkbox of checkboxes) {
+            if (checkbox.checked) {
+                params.push(`${checkbox.dataset.filterType}=${encodeURIComponent(checkbox.dataset.filterValue)}`);
+            }
+        }
+        params.push(`page=${pageCounter}`);
+        if (params.length > 0) {
+            return `http://127.0.0.1:8000/main/api/songs/?${params.join('&')}`;
+        }
+        else {
+            return "http://127.0.0.1:8000/main/api/songs/";
+        }
+    }
+
+    async function fetchData(url) {
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error(`Server Error: ${response.status}`);
+        }
+
+        const data = await response.json();
+        return data
+    }
+
+    function errorInTable(error) {
+        table = document.getElementById('songs-table-body');
+        table.innerHTML = `
+            <tr class="hover:bg-gray-800">
+                <td class="px-4 py-3">${error}</td>
+
+            </tr>
+        `;
+    }
+
+    function tableUpdate(songs) {
+        table = document.getElementById('songs-table-body');
+        table.innerHTML = '';
+        for (const song of songs) {
+            table.innerHTML += `
+                <tr class="hover:bg-gray-800">
+                    <td class="px-4 py-3">${song.name}</td>
+                    <td class="px-4 py-3">${song.group}</td>
+                    <td class="px-4 py-3">${song.visit}</td>
+                    <td class="px-4 py-3">${song.instruments.join(', ')}</td>
+                    <td class="px-4 py-3">
+                        <audio controls class="w-full">
+                            <source src=${song.audio_url} type="audio/mpeg">
+                        </audio>
+                    </td>
+                    <td class="px-4 py-3"><a href="http://www.youtube.com">www.youtube.com</a></td>
+                </tr>
+            `;
+        }
+    }
+
+    // ====================
+    // QUERY - PAGE LOAD
+    // ====================
+
+    loadSongs();
+
+</script>
