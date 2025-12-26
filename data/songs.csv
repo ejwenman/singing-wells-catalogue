@@ -1,0 +1,4 @@
+name,group,visit_id,audio,instruments
+Song 1,Group 1,NAI-001,audio/filepath.1,"nyatiti, drums"
+Song 2,Group 1,NAI-002,audio/filepath.2,"nyatiti, orutu"
+Song 3,Group 2,BAG-001,audio/filepath.3,kalimba
