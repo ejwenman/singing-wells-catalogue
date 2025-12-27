@@ -243,11 +243,12 @@
             }
         }
         params.push(`page=${pageCounter}`);
+        const baseUrl = window.location.origin; // Gets current domain automatically
         if (params.length > 0) {
-            return `http://127.0.0.1:8000/main/api/songs/?${params.join('&')}`;
+            return `${baseUrl}/main/api/songs/?${params.join('&')}`;
         }
         else {
-            return "http://127.0.0.1:8000/main/api/songs/";
+            return `${baseUrl}/main/api/songs/`;
         }
     }
 
