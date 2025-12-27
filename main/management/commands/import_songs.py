@@ -40,8 +40,14 @@ class Command(BaseCommand):
                         try:
                             instrument = Instrument.objects.get(name=entry)
                         except Instrument.DoesNotExist:
-                            self.stdout.write(self.style.ERROR(f"ERROR: Instrument {entry} does not exist. Skipping entry.")) 
-                            continue  
+                            self.stdout.write(self.style.NOTICE(f"Instrument {entry} does not exist. Create instrument (y/n)?."))
+                            answer = str(input())
+                            if answer == 'y':
+                                instrument = Instrument.objects.create(name=entry)
+                                self.stdout.write(self.style.SUCCESS(f"Created instrument {instrument.name}"))
+                            else:
+                                self.stdout.write(self.style.Error(f"Instrument {entry} not created. Did not add to song."))
+                                continue  
                         song.instruments.add(instrument)
                     self.stdout.write(self.style.SUCCESS(f"Created song {song.name}"))
                 else:
