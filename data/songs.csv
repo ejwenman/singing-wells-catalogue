@@ -1,4 +1,4 @@
-name,group,visit_id,filename,instruments
-Song 1,Group 1,NAI-001,filepath1.mp3,"nyatiti, drums"
+name,group,visit_id,audio_path,instruments
+Song 4,Group 1,NAI-001,filepath1.mp3,"nyatiti, drums"
 Song 2,Group 1,NAI-002,filepath2.mp3,"nyatiti, orutu"
 Song 3,Group 2,BAG-001,filepath3.mp3,kalimba

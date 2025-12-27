@@ -32,7 +32,7 @@ class Command(BaseCommand):
                     group=group,
                     defaults={
                         'visit': visit,
-                        'audio': f"/static/audio/songs{row['filename']}"
+                        'audio_path': f"/static/audio/songs{row['audio_path']}"
                     })
                 if created:
                     for entry in csv_instruments:
