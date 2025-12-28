@@ -23,10 +23,10 @@
     <main class="max-w-7xl mx-auto px-4 py-8">
 
         <!-- Filter section -->
-        <div class="py-3 text-gray-200 text-center uppercase text-sm">
+        <div class="py-3 text-gray-200 text-center uppercase text-m">
             <h2>Filter</h2>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+        <div class="pb-3 grid grid-cols-2 md:grid-cols-5 gap-4">
 
             <!-- Instruments -->
             <div>
@@ -284,7 +284,7 @@
                     <td class="px-4 py-3">${song.visit}</td>
                     <td class="px-4 py-3">${song.instruments.join(', ')}</td>
                     <td class="px-4 py-3">
-                        <audio controls class="w-full">
+                        <audio controls controlslist="nodownload" oncontextmenu="return false" class="w-full">
                             <source src=${song.audio_url} type="audio/mpeg">
                         </audio>
                     </td>

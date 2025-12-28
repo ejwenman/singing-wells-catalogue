@@ -70,7 +70,7 @@ def songs_api(request):
                 returned_songs.append(song)
        
         page_number = int(filter.get('page', [1])[0])
-        page_size = int(filter.get('page_size', [2])[0])
+        page_size = int(filter.get('page_size', [20])[0])
 
         total_pages = max(1, math.ceil(len(returned_songs)/page_size))
         song_start = ((page_number-1)*(page_size))
@@ -87,7 +87,7 @@ def songs_api(request):
             songs_data.append({
                 'name': song.name,
                 'group': song.group.name,
-                'visit': song.visit.date,
+                'visit': song.visit.location,
                 'audio_url': audio_url,
                 'instruments': instruments,
             })
