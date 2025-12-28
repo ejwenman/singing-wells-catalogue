@@ -245,10 +245,10 @@
         params.push(`page=${pageCounter}`);
         const baseUrl = window.location.origin; // Gets current domain automatically
         if (params.length > 0) {
-            return `${baseUrl}/main/api/songs/?${params.join('&')}`;
+            return `${baseUrl}/api/songs/?${params.join('&')}`;
         }
         else {
-            return `${baseUrl}/main/api/songs/`;
+            return `${baseUrl}/api/songs/`;
         }
     }
 
