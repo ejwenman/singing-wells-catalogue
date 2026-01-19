@@ -1,4 +1,11 @@
-name,group,visit_id,audio_path,instruments
-Song 1,Group 1,NAI-001,filepath1.mp3,"nyatiti, drums"
-Song 2,Group 2,NAI-002,filepath2.mp3,"kalimba"
-Song 3,Group 2,NAI-002,filepath3.mp3,"orutu, nyatiti"
+archive_id,name,group,visit_id,audio_path,youtube,instruments
+SWP110329-1,Performance 1,Nyerere Wa Konde Music Club,KEN2011A-01,path.mp3,https://youtu.be/-MU13FLg_io?si=Ulr99wR4KzrWHCEy,"Lungo, Ndema"
+SWP110329-2,Performance 2,Nyerere Wa Konde Music Club,KEN2011A-01,path.mp3,https://youtu.be/JMST0FdIk7w?si=rYGPAzEVr0d5oDhp,"Lungo, Ndema"
+SWP110329-3,Performance 3,Nyerere Wa Konde Music Club & Winyo,KEN2011A-01,path.mp3,https://youtu.be/k8zR1Hq0VXc?si=G9hWBXtN0mNXRDYQ,"Lungo, Ndema"
+SWP110329-4,Performance 1,Zaire Ndingdingwara,KEN2011A-01,path.mp3,https://youtu.be/3bvGrAulYP4?si=ociqURiaXK16bBKh,"Shakers, Filimbi"
+SWP110329-5,Performance 2,Zaire Ndingdingwara,KEN2011A-01,path.mp3,https://youtu.be/cvpcFBTaoTo?si=CYiadzlsog5g-o0x,"Shakers, Filimbi"
+SWP110329-6,Performance 3,Zaire Ndingdingwara,KEN2011A-01,path.mp3,,"Shakers, Filimbi"
+SWP110330-1,Performance 1,Chechemeko Raha,KEN2011A-02,path.mp3,,"Gunda, Percussion"
+SWP110330-2,Performance 2,Chechemeko Raha,KEN2011A-02,path.mp3,,"Gunda, Percussion"
+SWP110330-3,Performance 3,Chechemeko Raha,KEN2011A-02,path.mp3,,"Gunda, Percussion"
+SWP110330-4,Performance 1,4 the Mzinga,KEN2011A-02,path.mp3,https://youtu.be/a9ASrX4Rb00?si=vigLk6OG763_zAEB,Marimba

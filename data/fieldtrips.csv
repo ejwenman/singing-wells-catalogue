@@ -1,5 +1,17 @@
-year,region,name
-2017,Tanzania,
-2018,Kenya,
-2019,Rwanda,
-2020,Kenya,
+trip_id,year,country,region,name
+001,2011,Kenya,Coastal Region,
+002,2011,Uganda,South West,
+003,2011,Kenya,Nyanza Province,
+004,2012,Kenya,Rift Valley,
+005,2012,Uganda,Northern,
+006,2013,Uganda,Central & Eastern,
+007,2014,Kenya,Central/Eastern,
+008,2015,Uganda,Royal Palaces,
+009,2016,Uganda,Royal Palaces,
+010,2017,Tanzania,Dar es Salaam/Bagamoyo,
+011,2017,#VALUE!,,Masters of the Nyatiti
+012,2018,Kenya,"Busia, Bungoma, Kakamega & Vihiga",
+013,2019,Tanzania,Northern,
+014,2020,Zanzibar & Pemba,,
+015,2022,Kenya,Western,
+016,2023,Rwanda,,

@@ -9,11 +9,18 @@ def view_songs(request):
     instruments = Instrument.objects.all()
     trips = FieldTrip.objects.all()
     groups = Group.objects.all()
+
+    countries = []
+    for trip in trips:
+        if trip.country not in countries:
+            countries.append(trip.country)
+
     context = {
         'songs':songs,
         'instruments':instruments,
         'trips':trips,
         'groups':groups,
+        'countries':countries,
         }
     return render(request, 'main/base.html', context)
 
@@ -28,14 +35,15 @@ def songs_api(request):
                 value_list.append(value)
             filter.update({key:value_list})
 
-        songs = Song.objects.all()
-        returned_songs = []
-
         field_map = {
             'instrument': 'instruments',
             'group': 'group',
             'fieldTrip': 'visit.field_trip',
+            'country': 'visit.field_trip.country',
         }
+
+        songs = Song.objects.all()
+        returned_songs = []
 
         for song in songs:
             is_match = 1
@@ -53,7 +61,6 @@ def songs_api(request):
                                 if not attribute.filter(name=value).exists():
                                     is_match = 0
                                     break
-
                         else:
                             # splitting map to chain getattr
                             levels = field_map[field].split(".")
@@ -61,7 +68,6 @@ def songs_api(request):
                             attribute = getattr(song, levels[0])
                             for level in levels[1:]:
                                 attribute = getattr(attribute, level)
-
                             items = filter[field]
                             if not str(attribute) in items:
                                 is_match = 0
@@ -87,9 +93,12 @@ def songs_api(request):
             songs_data.append({
                 'name': song.name,
                 'group': song.group.name,
-                'visit': song.visit.location,
+                'country': song.visit.field_trip.country,
+                'location': song.visit.location,
                 'audio_url': audio_url,
                 'instruments': instruments,
+                'youtube': song.youtube,
+                'region': song.visit.field_trip.region,
             })
         context = {
             'songs':songs_data,

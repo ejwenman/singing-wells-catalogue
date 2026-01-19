@@ -6,7 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Singing Wells Archive</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script defer scr="http://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-scroll {
+            animation: scroll 10s linear infinite;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-950">
@@ -48,24 +62,6 @@
                 </div>
             </div>
 
-            <!-- Field Trips -->
-            <div>
-                <div id="openTrips"
-                    class="max-w-48 border border-gray-500 rounded-lg bg-gray-950 px-3 py-2 text-gray-400 text-sm">
-                    Field Trips
-                </div>
-                <div id="tripFilterContainer"
-                    class="filter-container max-w-48 rounded-lg border border-gray-500 bg-gray-50 px-3 py-2 text-gray-500 text-sm hidden">
-                    {% for trip in trips %}
-                    <div>
-                        <input type="checkbox" class="filter-checkbox" id="{{ trip }}Filter" name="{{ trip }}Filter"
-                            data-filter-type="fieldTrip" data-filter-value="{{ trip }}">
-                        <label for="{{ trip }}Filter">{{ trip }}</label>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-
             <!-- Groups -->
             <div>
                 <div id="openGroups"
@@ -83,30 +79,70 @@
                     {% endfor %}
                 </div>
             </div>
+
+            <!-- Countries -->
+            <div>
+                <div id="openCountries"
+                    class="max-w-48 border border-gray-500 rounded-lg bg-gray-950 px-3 py-2 text-gray-400 text-sm">
+                    Countries
+                </div>
+                <div id="countryFilterContainer"
+                    class="filter-container max-w-48 rounded-lg border border-gray-500 bg-gray-50 px-3 py-2 text-gray-500 text-sm hidden">
+                    {% for country in countries %}
+                    <div>
+                        <input type="checkbox" class="filter-checkbox" id="{{ country }}Filter"
+                            name="{{ country }}Filter" data-filter-type="country" data-filter-value="{{ country }}">
+                        <label for="{{ country }}Filter">{{ country }}</label>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+
+            <!-- Field Trips -->
+            <div>
+                <div id="openTrips"
+                    class="max-w-48 border border-gray-500 rounded-lg bg-gray-950 px-3 py-2 text-gray-400 text-sm">
+                    Field Trips
+                </div>
+                <div id="tripFilterContainer"
+                    class="filter-container max-w-48 rounded-lg border border-gray-500 bg-gray-50 px-3 py-2 text-gray-500 text-sm hidden">
+                    {% for trip in trips %}
+                    <div>
+                        <input type="checkbox" class="filter-checkbox" id="{{ trip }}Filter" name="{{ trip }}Filter"
+                            data-filter-type="fieldTrip" data-filter-value="{{ trip }}">
+                        <label for="{{ trip }}Filter">{{ trip }}</label>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
 
         <!-- Table Section -->
         <div class="overflow-x-auto py-3">
             <div class="bg-gray-600/25 rounded-lg">
-                <table class="min-w-full text-left text-sm border-collapse text-gray-400">
-                    <thead>
-                        <tr class="border-b border-gray-500 text-gray-300">
-                            <th class="p-4 w-1/6">Songs</th>
-                            <th class="p-4 w-1/6">Group</th>
-                            <th class="p-4 w-1/6">Location</th>
-                            <th class="p-4 w-1/6">Instruments</th>
-                            <th class="p-4 w-1/6">Audio FIle</th>
-                            <th class="p-4 w-1/6">Video Link</th>
-                        </tr>
-                    </thead>
-                    <tbody id="songs-table-body">
-                        <!-- Javascript inserts song rows here -->
-                    </tbody>
-                </table>
+                <div class="overflow-x-auto">
+                    <table class="text-left text-sm border-collapse text-gray-400 w-full">
+                        <thead>
+                            <tr class="border-b border-gray-500 text-gray-300">
+                                <th class="p-4 min-w-[200px]">Song Name</th>
+                                <th class="p-4 min-w-[250px]">Group</th>
+                                <th class="p-4 min-w-[120px]">Country</th>
+                                <th class="p-4 min-w-[150px]">Region</th>
+                                <th class="p-4 min-w-[120px]">Location</th>
+                                <th class="p-4 min-w-[180px]">Instruments</th>
+                                <th class="p-4 min-w-[120px]">Video Link</th>
+                            </tr>
+                        </thead>
+                        <tbody id="songs-table-body">
+                            <!-- Javascript inserts song rows here -->
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
             <!-- Arrows and page number -->
-            <div class="flex justify-center items-center gap-4 mt-6 mb-8 text-gray-400 text-sm">
+            <div class="flex justify-center items-center gap-4 mt-6 text-gray-400 text-sm">
                 <button id="pageLeft">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="size-6">
                         <path fill-rule="evenodd"
@@ -124,6 +160,63 @@
                             clip-rule="evenodd" />
                     </svg>
                 </button>
+            </div>
+        </div>
+        <!-- Space behind audio player -->
+        <div class="h-20">
+        </div>
+        <!-- Audio Player -->
+        <audio class="hidden" id="audio-object"></audio>
+        <div
+            class="fixed bottom-0 left-0 right-0 h-20  px-4 flex gap-4 items-center justify-center bg-gray-900/75  text-blue-900 backdrop-blur-md">
+            <div
+                class="w-60 overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_5px,_black_calc(100%-5px),transparent_100%)]">
+                <div class="inline-flex whitespace-nowrap animate-scroll text-white text-sm" id="player-metadata">
+                </div>
+            </div>
+            <div class="flex-1 max-w-4xl h-100% flex items-center justify-center gap-2 py-2 px-4">
+                <div>
+                    <button id="play-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                        </svg>
+                    </button>
+                </div>
+                <div>
+                    <button id="pause-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex-1 bg-gray-700 h-2 rounded-2xl overflow-hidden hover:h-8 transition-all duration-150"
+                    id="duration-bar">
+                    <div class="h-full bg-blue-300" style="width: 0%;" id="progress-bar">
+                    </div>
+                </div>
+            </div>
+            <div class="w-60 text-center flex items-center gap-2">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
+                    </svg>
+                </div>
+                <div class="flex-1 flex items-center h-5 cursor-pointer" id="volume-container">
+                    <div class="w-full rounded-2xl bg-gray-700 h-1">
+                        <div class="relative rounded-2xl bg-blue-300 h-1" style="width: 100%;" id="volume-bar">
+                            <div class="absolute -right-[10px] -top-[8px] text-blue-300  ">
+                                <svg height="20" width="20">
+                                    <circle cx="10" cy="10" r="10" fill="currentColor" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -146,9 +239,10 @@
         openInstruments: document.getElementById('instrumentFilterContainer'),
         openTrips: document.getElementById('tripFilterContainer'),
         openGroups: document.getElementById('groupFilterContainer'),
+        openCountries: document.getElementById('countryFilterContainer'),
     }
 
-    for (buttonId in buttonToContainer) {
+    for (const buttonId in buttonToContainer) {
         const button = document.getElementById(buttonId);
         setupButtonListener(button, buttonId);
         setupContainerListener(buttonId);
@@ -176,7 +270,7 @@
     })
 
     function anywhereHide(elements) {
-        for (element of elements) {
+        for (const element of elements) {
             if (!element.classList.contains('hidden')) {
                 element.classList.add('hidden');
             }
@@ -189,9 +283,9 @@
 
     let pageCounter = 1;
     let pageTotal = 3;
-    pageInfoElement = document.getElementById('page-info');
-    pageLeft = document.getElementById('pageLeft');
-    pageRight = document.getElementById('pageRight');
+    const pageInfoElement = document.getElementById('page-info');
+    const pageLeft = document.getElementById('pageLeft');
+    const pageRight = document.getElementById('pageRight');
 
     pageLeft.addEventListener('click', async function () {
         if (pageCounter > 1) {
@@ -254,43 +348,50 @@
 
     async function fetchData(url) {
         const response = await fetch(url);
-
         if (!response.ok) {
             throw new Error(`Server Error: ${response.status}`);
         }
-
         const data = await response.json();
         return data
     }
 
     function errorInTable(error) {
-        table = document.getElementById('songs-table-body');
+        const table = document.getElementById('songs-table-body');
         table.innerHTML = `
             <tr class="hover:bg-gray-800">
                 <td class="px-4 py-3">${error}</td>
-
             </tr>
         `;
     }
 
+    let tableRows = [];
+
     function tableUpdate(songs) {
-        table = document.getElementById('songs-table-body');
+        const table = document.getElementById('songs-table-body');
         table.innerHTML = '';
         for (const song of songs) {
             table.innerHTML += `
-                <tr class="hover:bg-gray-800">
-                    <td class="px-4 py-3">${song.name}</td>
-                    <td class="px-4 py-3">${song.group}</td>
-                    <td class="px-4 py-3">${song.visit}</td>
-                    <td class="px-4 py-3">${song.instruments.join(', ')}</td>
-                    <td class="px-4 py-3">
-                        <audio controls controlslist="nodownload" oncontextmenu="return false" class="w-full">
-                            <source src=${song.audio_url} type="audio/mpeg">
-                        </audio>
+                <tr class="song-row hover:bg-gray-800" data-audio-url="${song.audio_url}" data-song-name="${song.name}" data-group-name="${song.group}">
+                    <td class="px-4 py-5">${song.name}</td>
+                    <td class="px-4 py-5">${song.group}</td>
+                    <td class="px-4 py-5">${song.country}</td>
+                    <td class="px-4 py-5">${song.region}</td>
+                    <td class="px-4 py-5">${song.location}</td>
+                    <td class="px-4 py-5">${song.instruments.join(', ')}</td>
+                    <td class="px-4 py-5">
+                        <a href="${song.youtube}">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">  
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
+                            </svg>
+                        </a>
                     </td>
-                    <td class="px-4 py-3"><a href="http://www.youtube.com">www.youtube.com</a></td>
+
                 </tr>
             `;
+        }
+        tableRows = document.querySelectorAll('.song-row');
+        for (const row of tableRows) {
+            setupRowListeners(row);
         }
     }
 
@@ -299,5 +400,155 @@
     // ====================
 
     loadSongs();
+
+    // ====================
+    // AUDIO PLAYER
+    // ====================
+
+    const playButton = document.getElementById('play-button');
+    const pauseButton = document.getElementById('pause-button');
+    const audioObject = document.getElementById('audio-object');
+    const progressBar = document.getElementById('progress-bar');
+    const durationBar = document.getElementById('duration-bar');
+    const volumeBar = document.getElementById('volume-bar');
+    const volumeContainer = document.getElementById('volume-container');
+
+    let isPlaying = false;
+
+    function setupRowListeners(row) {
+        row.addEventListener('dblclick', function () {
+            for (const otherRow of tableRows) {
+                otherRow.classList.remove('bg-blue-900');
+            }
+            row.classList.add('bg-blue-900');
+            audioObject.src = row.dataset.audioUrl;
+            audioObject.load();
+            playAudio();
+            progressBar.style.width = '0%';
+            updatePlayerMetadata(row.dataset.songName, row.dataset.groupName);
+        })
+    }
+
+    function updatePlayerMetadata(song, group) {
+        const metadataElement = document.getElementById('player-metadata');
+        metadataElement.textContent = `"${song}" - ${group}, "${song}" - ${group}`
+    }
+
+    // Controls & Progress Bar
+    playButton.addEventListener('click', function () {
+        playAudio();
+    })
+
+    pauseButton.addEventListener('click', function () {
+        pauseAudio();
+    })
+
+    function playAudio() {
+        if (!audioObject.src) {
+            return;
+        }
+        audioObject.play();
+        pauseButton.classList.remove('text-blue-300');
+        playButton.classList.add('text-blue-300');
+        isPlaying = true;
+    }
+
+    function pauseAudio() {
+        audioObject.pause();
+        playButton.classList.remove('text-blue-300');
+        pauseButton.classList.add('text-blue-300');
+        isPlaying = false;
+    }
+
+    function updateProgressBar() {
+        if (!audioObject.paused && audioObject.duration) {
+            const progress = audioObject.currentTime / audioObject.duration;
+            progressBar.style.width = `${progress * 100}%`;
+        }
+        requestAnimationFrame(updateProgressBar);
+    }
+    updateProgressBar();
+
+    // Seeking
+    let isDragging = false;
+    let hasDragged = false;
+    let durationBarWidth;
+
+    durationBar.addEventListener('mousedown', function () {
+        durationBarWidth = durationBar.clientWidth;
+        audioObject.pause();
+        isDragging = true;
+        hasDragged = false;
+        if (audioObject.duration) {
+            const progress = event.offsetX / durationBarWidth;
+            progressBar.style.width = `${progress * 100}%`;
+            audioObject.currentTime = audioObject.duration * progress;
+        }
+        event.preventDefault();
+    })
+
+    document.addEventListener('mousemove', function (event) {
+        if (isDragging && audioObject.duration) {
+            const durationBarLeft = durationBar.getBoundingClientRect().left;
+            const durationBarRight = durationBar.getBoundingClientRect().right;
+            if (event.clientX <= durationBarRight && event.clientX >= durationBarLeft) {
+                hasDragged = true;
+                const progress = (event.clientX - durationBarLeft) / durationBarWidth;
+                progressBar.style.width = `${progress * 100}%`;
+                audioObject.currentTime = audioObject.duration * progress;
+            }
+        }
+    })
+
+    durationBar.addEventListener('mouseup', function (event) {
+        isDragging = false;
+        if (isPlaying) {
+            audioObject.play();
+        }
+    })
+
+    document.addEventListener('mouseup', function () {
+        if (isDragging) {
+            isDragging = false;
+            if (isPlaying) {
+                audioObject.play();
+            }
+        }
+    })
+
+    // Volume
+
+    let volumeContainerWidth;
+    let volumeDragging = false;
+
+    volumeContainer.addEventListener('mousedown', function (event) {
+        volumeContainerWidth = volumeContainer.clientWidth;
+        const containerLeft = volumeContainer.getBoundingClientRect().left;
+        const volume = ((event.clientX - containerLeft) / volumeContainerWidth);
+        volumeDragging = true;
+        volumeBar.style.width = `${volume * 100}%`;
+        audioObject.volume = volume;
+        event.preventDefault();
+    })
+
+    document.addEventListener('mousemove', function (event) {
+        if (volumeDragging == true) {
+            const containerRight = volumeContainer.getBoundingClientRect().right;
+            const containerLeft = volumeContainer.getBoundingClientRect().left
+            if (event.clientX <= containerRight && event.clientX >= containerLeft) {
+                const volume = ((event.clientX - containerLeft) / volumeContainerWidth);
+                volumeBar.style.width = `${volume * 100}%`;
+                audioObject.volume = volume;
+            }
+        }
+    })
+
+    volumeContainer.addEventListener('mouseup', function (event) {
+        volumeDragging = false;
+    })
+
+    document.addEventListener('mouseup', function () {
+        volumeDragging = false;
+    })
 
 </script>

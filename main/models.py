@@ -2,25 +2,27 @@ from django.db import models
 
 # Create your models here.
 class FieldTrip(models.Model):
+    archive_id = models.CharField(max_length=3, unique=True)
     year = models.IntegerField()
-    region = models.CharField(max_length=255)
+    country = models.CharField(max_length=50)
+    region = models.CharField(max_length=255, blank=True, null=True)
     name = models.CharField(max_length=100, blank=True, null=True)
 
     def __str__(self):
-        return f"{self.year} - {self.region}"
+        return f"{self.year} - {self.country}, {self.region}"
 
 class Visit(models.Model):
-    visit_id = models.CharField(max_length=50, unique=True)
+    archive_id = models.CharField(max_length=12, unique=True)
     date = models.DateField()
     location = models.CharField(max_length=100)
     field_trip = models.ForeignKey(FieldTrip, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.visit_id}, {self.date} – {self.location}"
+        return f"{self.archive_id}, {self.date} – {self.location}"
     
 class Group(models.Model):
     name = models.CharField(max_length=255)
-    origin = models.CharField("Village/Place of Origin", max_length=50)
+    origin = models.CharField("Village/Place of Origin", max_length=50, null=True)
 
     def __str__(self):
         return self.name
@@ -32,6 +34,7 @@ class Instrument(models.Model):
         return self.name
     
 class Song(models.Model):
+    archive_id = models.CharField(max_length=12, unique=True)
     name = models.CharField(max_length=100)
     group = models.ForeignKey(Group, on_delete=models.PROTECT)
     visit = models.ForeignKey(
@@ -41,6 +44,7 @@ class Song(models.Model):
     )
     audio_path = models.CharField(max_length=255, null=True)
     instruments = models.ManyToManyField(Instrument)
+    youtube = models.CharField(max_length=255, null=True)
 
     def __str__(self):
         return self.name
