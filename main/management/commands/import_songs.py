@@ -19,7 +19,7 @@ class Command(BaseCommand):
                 csv_visit = row['visit_id']
                 csv_instruments = row['instruments'].split(",")
                 csv_instruments = [str(i).strip() for i in csv_instruments]
-                csv_audio_path = f"/static/audio/songs{row['audio_path']}"
+                csv_audio_path = f"/singing_wells_media_archive/{row['audio_path']}"
                 csv_youtube = row ['youtube']
 
                 # Check if visit exists. Skip if not.

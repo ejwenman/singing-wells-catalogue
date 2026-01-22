@@ -1,98 +1,98 @@
-archive_id,date,location,field_trip,field_trip description
-KEN2011A-01,2011-03-29,Sita,001,2011 Kenya (Coastal Region)
-KEN2011A-02,2011-03-30,Kibrani,001,2011 Kenya (Coastal Region)
-KEN2011A-03,2011-03-30,Junda,001,2011 Kenya (Coastal Region)
-KEN2011A-04,2011-03-31,Vuga,001,2011 Kenya (Coastal Region)
+archive_id,date,location,field_trip,field_trip description (not used for import)
+KEN2011A-01,2011-03-29,Sita,1,2011 Kenya (Coastal Region)
+KEN2011A-02,2011-03-30,Kibrani,1,2011 Kenya (Coastal Region)
+KEN2011A-03,2011-03-30,Junda,1,2011 Kenya (Coastal Region)
+KEN2011A-04,2011-03-31,Vuga,1,2011 Kenya (Coastal Region)
 KEN2011B-01,2011-05-14,Lake Turkana Cultural Festival,#N/A,#N/A
 KEN2011B-02,2011-05-15,"Saila Bandas Hotel, Loiyangalai",#N/A,#N/A
-UGA2011-01,2011-11-22,"Birara Community, Kisoro District",002,2011 Uganda (South West)
-UGA2011-02,2011-11-23,"Mperwa Community, Kisoro District",002,2011 Uganda (South West)
-UGA2011-03,2011-11-23,"Nyakabande UNHCR Camp, Kisoro District",002,2011 Uganda (South West)
-UGA2011-04,2011-11-23,"Travelers Rest Hotel, Kisoro",002,2011 Uganda (South West)
-UGA2011-05,2011-11-24,"Travelers Rest Hotel, Kisoro",002,2011 Uganda (South West)
-KEN2011C-01,2011-11-28,"Rang'ala Village, Nyanza province",003,2011 Kenya (Nyanza Province)
-KEN2011C-02,2011-11-29,"Aluny Village, Nyanza Province",003,2011 Kenya (Nyanza Province)
-KEN2011C-03,2011-11-30,"Homa Bay Hotel, Homa Bay",003,2011 Kenya (Nyanza Province)
-KEN2011C-04,2011-12-01,"Dinky's Resort Club, Rongo",003,2011 Kenya (Nyanza Province)
-KEN2012-01,2012-03-05,"Chesamis High School, Kapsokwony",004,2012 Kenya (Rift Valley)
-KEN2012-02,2012-03-06,"Sila, Kapenguria",004,2012 Kenya (Rift Valley)
-KEN2012-03,2012-03-07,Kobil,004,2012 Kenya (Rift Valley)
-KEN2012-04,2012-03-08,"Kabarnet Museum, Baringo",004,2012 Kenya (Rift Valley)
-UGA2012-01,2012-12-01,"Acet Central, Gulu, Northern Region",005,2012 Uganda (Northern)
-UGA2012-02,2012-12-02,"Paibona, Awach, Gulu, Northern Province",005,2012 Uganda (Northern)
-UGA2012-03,2012-12-03,"Widiang'a Village, Pakwach,  Nebbi District",005,2012 Uganda (Northern)
-UGA2012-04,2012-12-03,"Fort Murchison, Pakwach, Nebbi District",005,2012 Uganda (Northern)
-UGA2012-05,2012-12-05,"Obulelira Village, Soroti, Eastern Region",005,2012 Uganda (Northern)
-UGA2012-06,2012-12-06,"Naguru, Kampala",005,2012 Uganda (Northern)
-UGA2012-07,2012-12-06,"Entebbe Airport Guesthouse, Entebbe",005,2012 Uganda (Northern)
-UGA2013-01,2013-11-19,Kidinda Village,006,2013 Uganda (Central & Eastern)
-UGA2013-02,2013-11-20,"Budaka Progressive school, Budaka",006,2013 Uganda (Central & Eastern)
-UGA2013-03,2013-11-21,"Bugwere Road Market, Mbale",006,2013 Uganda (Central & Eastern)
-UGA2013-04,2013-11-21,"Nakinsene, near Inganga",006,2013 Uganda (Central & Eastern)
-UGA2013-05,2013-11-22,"Gately on the Nile Hotel, Jinja",006,2013 Uganda (Central & Eastern)
-UGA2013-06,2013-11-23,"Gately on the Nile Hotel, Jinja",006,2013 Uganda (Central & Eastern)
-UGA2013-07,2013-11-24,"Kaymbogo University, Kampala",006,2013 Uganda (Central & Eastern)
-UGA2013-08,2013-11-24,"Uganda Museum, Kampala",006,2013 Uganda (Central & Eastern)
-UGA2013-09,2013-11-25,"Airport Guesthouse, Entebbe",006,2013 Uganda (Central & Eastern)
-KEN2014-01,2014-03-02,Kiongwe,007,2014 Kenya (Central/Eastern)
-KEN2014-02,2014-03-03,Kangema,007,2014 Kenya (Central/Eastern)
-KEN2014-03,2014-03-04,Heritage Hotel Nkubu,007,2014 Kenya (Central/Eastern)
-KEN2014-04,2014-03-05,Mukuuni,007,2014 Kenya (Central/Eastern)
-UGA2015-01,2015-11-30,Kyambogo University,008,2015 Uganda (Royal Palaces)
-UGA2015-02,2015-12-01,"Bukakaire, Jinja",008,2015 Uganda (Royal Palaces)
-UGA2015-03,2015-12-02,Mukono,008,2015 Uganda (Royal Palaces)
-UGA2015-04,2015-12-03,Uganda National Museum,008,2015 Uganda (Royal Palaces)
-UGA2016-01,2016-10-25,Kyambogo University,009,2016 Uganda (Royal Palaces)
-UGA2016-02,2016-10-26,Kyambogo University,009,2016 Uganda (Royal Palaces)
-UGA2016-03,2016-10-27,Busembatia,009,2016 Uganda (Royal Palaces)
-UGA2016-04,2016-10-28,Kyambogo University,009,2016 Uganda (Royal Palaces)
-TAN2017-01,2017-02-18,Dar es Salaam,010,2017 Tanzania (Dar es Salaam/Bagamoyo)
-TAN2017-02,2017-02-19,Nia Njema,010,2017 Tanzania (Dar es Salaam/Bagamoyo)
-TAN2017-03,2017-02-20,Bagamoyo,010,2017 Tanzania (Dar es Salaam/Bagamoyo)
-TAN2017-04,2017-02-20,Boma Village,010,2017 Tanzania (Dar es Salaam/Bagamoyo)
-TAN2017-05,2017-02-20,Bagamoyo Country Club,010,2017 Tanzania (Dar es Salaam/Bagamoyo)
-TAN2017-06,2017-02-21,Bagamoyo Country Club,010,2017 Tanzania (Dar es Salaam/Bagamoyo)
-TAN2017-07,2017-02-22,Ukuni Village,010,2017 Tanzania (Dar es Salaam/Bagamoyo)
-TAN2017-08,2017-02-23,Victoria Park,010,2017 Tanzania (Dar es Salaam/Bagamoyo)
-TAN2017-09,2017-02-24,Nafasi Art Space,010,2017 Tanzania (Dar es Salaam/Bagamoyo)
+UGA2011-01,2011-11-22,"Birara Community, Kisoro District",2,2011 Uganda (South West)
+UGA2011-02,2011-11-23,"Mperwa Community, Kisoro District",2,2011 Uganda (South West)
+UGA2011-03,2011-11-23,"Nyakabande UNHCR Camp, Kisoro District",2,2011 Uganda (South West)
+UGA2011-04,2011-11-23,"Travelers Rest Hotel, Kisoro",2,2011 Uganda (South West)
+UGA2011-05,2011-11-24,"Travelers Rest Hotel, Kisoro",2,2011 Uganda (South West)
+KEN2011C-01,2011-11-28,"Rang'ala Village, Nyanza province",3,2011 Kenya (Nyanza Province)
+KEN2011C-02,2011-11-29,"Aluny Village, Nyanza Province",3,2011 Kenya (Nyanza Province)
+KEN2011C-03,2011-11-30,"Homa Bay Hotel, Homa Bay",3,2011 Kenya (Nyanza Province)
+KEN2011C-04,2011-12-01,"Dinky's Resort Club, Rongo",3,2011 Kenya (Nyanza Province)
+KEN2012-01,2012-03-05,"Chesamis High School, Kapsokwony",4,2012 Kenya (Rift Valley)
+KEN2012-02,2012-03-06,"Sila, Kapenguria",4,2012 Kenya (Rift Valley)
+KEN2012-03,2012-03-07,Kobil,4,2012 Kenya (Rift Valley)
+KEN2012-04,2012-03-08,"Kabarnet Museum, Baringo",4,2012 Kenya (Rift Valley)
+UGA2012-01,2012-12-01,"Acet Central, Gulu, Northern Region",5,2012 Uganda (Northern)
+UGA2012-02,2012-12-02,"Paibona, Awach, Gulu, Northern Province",5,2012 Uganda (Northern)
+UGA2012-03,2012-12-03,"Widiang'a Village, Pakwach,  Nebbi District",5,2012 Uganda (Northern)
+UGA2012-04,2012-12-03,"Fort Murchison, Pakwach, Nebbi District",5,2012 Uganda (Northern)
+UGA2012-05,2012-12-05,"Obulelira Village, Soroti, Eastern Region",5,2012 Uganda (Northern)
+UGA2012-06,2012-12-06,"Naguru, Kampala",5,2012 Uganda (Northern)
+UGA2012-07,2012-12-06,"Entebbe Airport Guesthouse, Entebbe",5,2012 Uganda (Northern)
+UGA2013-01,2013-11-19,Kidinda Village,6,2013 Uganda (Central & Eastern)
+UGA2013-02,2013-11-20,"Budaka Progressive school, Budaka",6,2013 Uganda (Central & Eastern)
+UGA2013-03,2013-11-21,"Bugwere Road Market, Mbale",6,2013 Uganda (Central & Eastern)
+UGA2013-04,2013-11-21,"Nakinsene, near Inganga",6,2013 Uganda (Central & Eastern)
+UGA2013-05,2013-11-22,"Gately on the Nile Hotel, Jinja",6,2013 Uganda (Central & Eastern)
+UGA2013-06,2013-11-23,"Gately on the Nile Hotel, Jinja",6,2013 Uganda (Central & Eastern)
+UGA2013-07,2013-11-24,"Kaymbogo University, Kampala",6,2013 Uganda (Central & Eastern)
+UGA2013-08,2013-11-24,"Uganda Museum, Kampala",6,2013 Uganda (Central & Eastern)
+UGA2013-09,2013-11-25,"Airport Guesthouse, Entebbe",6,2013 Uganda (Central & Eastern)
+KEN2014-01,2014-03-02,Kiongwe,7,2014 Kenya (Central/Eastern)
+KEN2014-02,2014-03-03,Kangema,7,2014 Kenya (Central/Eastern)
+KEN2014-03,2014-03-04,Heritage Hotel Nkubu,7,2014 Kenya (Central/Eastern)
+KEN2014-04,2014-03-05,Mukuuni,7,2014 Kenya (Central/Eastern)
+UGA2015-01,2015-11-30,Kyambogo University,8,2015 Uganda (Royal Palaces)
+UGA2015-02,2015-12-01,"Bukakaire, Jinja",8,2015 Uganda (Royal Palaces)
+UGA2015-03,2015-12-02,Mukono,8,2015 Uganda (Royal Palaces)
+UGA2015-04,2015-12-03,Uganda National Museum,8,2015 Uganda (Royal Palaces)
+UGA2016-01,2016-10-25,Kyambogo University,9,2016 Uganda (Royal Palaces)
+UGA2016-02,2016-10-26,Kyambogo University,9,2016 Uganda (Royal Palaces)
+UGA2016-03,2016-10-27,Busembatia,9,2016 Uganda (Royal Palaces)
+UGA2016-04,2016-10-28,Kyambogo University,9,2016 Uganda (Royal Palaces)
+TAN2017-01,2017-02-18,Dar es Salaam,10,2017 Tanzania (Dar es Salaam/Bagamoyo)
+TAN2017-02,2017-02-19,Nia Njema,10,2017 Tanzania (Dar es Salaam/Bagamoyo)
+TAN2017-03,2017-02-20,Bagamoyo,10,2017 Tanzania (Dar es Salaam/Bagamoyo)
+TAN2017-04,2017-02-20,Boma Village,10,2017 Tanzania (Dar es Salaam/Bagamoyo)
+TAN2017-05,2017-02-20,Bagamoyo Country Club,10,2017 Tanzania (Dar es Salaam/Bagamoyo)
+TAN2017-06,2017-02-21,Bagamoyo Country Club,10,2017 Tanzania (Dar es Salaam/Bagamoyo)
+TAN2017-07,2017-02-22,Ukuni Village,10,2017 Tanzania (Dar es Salaam/Bagamoyo)
+TAN2017-08,2017-02-23,Victoria Park,10,2017 Tanzania (Dar es Salaam/Bagamoyo)
+TAN2017-09,2017-02-24,Nafasi Art Space,10,2017 Tanzania (Dar es Salaam/Bagamoyo)
 KEN2017-01,2017-07-02,"Umala village, Alego constituency (Siaya County)",#N/A,#N/A
 KEN-01,#VALUE!,,#N/A,#N/A
 KEN-02,#VALUE!,,#N/A,#N/A
 KEN-03,#VALUE!,,#N/A,#N/A
 KEN-04,#VALUE!,,#N/A,#N/A
 KEN2017-01,2017-07-10,GoDown Arts Centre?,#N/A,#N/A
-KEN2018-01,2018-02-17,Nanguba,012,"2018 Kenya (Busia, Bungoma, Kakamega & Vihiga Counties"
-KEN2018-02,2018-02-18,Adungosi,012,"2018 Kenya (Busia, Bungoma, Kakamega & Vihiga Counties"
-KEN2018-03,2018-02-19,Sirisia,012,"2018 Kenya (Busia, Bungoma, Kakamega & Vihiga Counties"
-KEN2018-04,2018-02-19,Lugulu,012,"2018 Kenya (Busia, Bungoma, Kakamega & Vihiga Counties"
-KEN2018-05,2018-02-20,Bungoma Town,012,"2018 Kenya (Busia, Bungoma, Kakamega & Vihiga Counties"
-KEN2018-06,2018-02-20,Mumias,012,"2018 Kenya (Busia, Bungoma, Kakamega & Vihiga Counties"
-KEN2018-07,2018-02-21,Shiriese Ikolomani,012,"2018 Kenya (Busia, Bungoma, Kakamega & Vihiga Counties"
-KEN2018-08,2018-02-22,Ilesi,012,"2018 Kenya (Busia, Bungoma, Kakamega & Vihiga Counties"
-KEN2018-09,2018-02-23,"Emativini, Ebubayi",012,"2018 Kenya (Busia, Bungoma, Kakamega & Vihiga Counties"
-KEN2018-10,2018-02-23,"Muilulu, Ebusamia",012,"2018 Kenya (Busia, Bungoma, Kakamega & Vihiga Counties"
-KEN2018-11,2018-02-23,"Ebwiranyi, Muhalahala ",012,"2018 Kenya (Busia, Bungoma, Kakamega & Vihiga Counties"
-KEN2018-12,2018-02-24,"Ebuhonga, Kisa",012,"2018 Kenya (Busia, Bungoma, Kakamega & Vihiga Counties"
-TAN2019-01,2019-01-19,Buturi,013,2019 Tanzania (Northern)
-TAN2019-02,2019-01-20,Budeka,013,2019 Tanzania (Northern)
-TAN2019-03,2019-01-21,Kisesa,013,2019 Tanzania (Northern)
-TAN2019-04,2019-01-22,Kagera Bukoba,013,2019 Tanzania (Northern)
-TAN2019-05,2019-01-24,Nzali,013,2019 Tanzania (Northern)
-ZAN2020-01,2020-02-16,Bi Kidude,014,2020 Zanzibar & Pemba
-ZAN2020-02,2020-02-17,Stonetown,014,2020 Zanzibar & Pemba
-ZAN2020-03,2020-02-18,Stonetown,014,2020 Zanzibar & Pemba
-ZAN2020-04,2020-02-19,Maruhabi Palace,014,2020 Zanzibar & Pemba
-ZAN2020-05,2020-02-20,DCMA Stonetown,014,2020 Zanzibar & Pemba
-KEN2022-01,2022-03-07,"Small Matters Park, Shikangania",015,2022 Kenya (Western)
-KEN2022-02,2022-03-07,"Kibukosya’s Gazebo, Mukumu",015,2022 Kenya (Western)
-KEN2022-03,2022-03-08,"Josephine Garden, Ilesi",015,2022 Kenya (Western)
-KEN2022-04,2022-03-09,"Dunga Hill Camp, Kisumu",015,2022 Kenya (Western)
-KEN2022-05,2022-03-10,"Treat House Resort, Rongo",015,2022 Kenya (Western)
-RWA2023-01,2023-11-22,Century Park Hotel (Kigali City),016,2023 Rwanda
-RWA2023-02,2023-11-23,"Highland Suites Hotel, Kigali",016,2023 Rwanda
-RWA2023-03,2023-11-23,"Gikondo, Kigali",016,2023 Rwanda
-RWA2023-04,2023-11-24,Butare,016,2023 Rwanda
-RWA2023-05,2023-11-26,"Highland Suites Hotel, Kigali",016,2023 Rwanda
-RWA2023-06,2023-11-26,Nyamirabo,016,2023 Rwanda
-RWA2023-07,2023-11-27,"Gikondo, Jado’s studio, Kigali",016,2023 Rwanda
-RWA2023-08,2023-11-27,"Gikondo, Jado’s studio, Kigali",016,2023 Rwanda
+KEN2018-01,2018-02-17,Nanguba,12,"2018 Kenya (Busia, Bungoma, Kakamega & Vihiga Counties"
+KEN2018-02,2018-02-18,Adungosi,12,"2018 Kenya (Busia, Bungoma, Kakamega & Vihiga Counties"
+KEN2018-03,2018-02-19,Sirisia,12,"2018 Kenya (Busia, Bungoma, Kakamega & Vihiga Counties"
+KEN2018-04,2018-02-19,Lugulu,12,"2018 Kenya (Busia, Bungoma, Kakamega & Vihiga Counties"
+KEN2018-05,2018-02-20,Bungoma Town,12,"2018 Kenya (Busia, Bungoma, Kakamega & Vihiga Counties"
+KEN2018-06,2018-02-20,Mumias,12,"2018 Kenya (Busia, Bungoma, Kakamega & Vihiga Counties"
+KEN2018-07,2018-02-21,Shiriese Ikolomani,12,"2018 Kenya (Busia, Bungoma, Kakamega & Vihiga Counties"
+KEN2018-08,2018-02-22,Ilesi,12,"2018 Kenya (Busia, Bungoma, Kakamega & Vihiga Counties"
+KEN2018-09,2018-02-23,"Emativini, Ebubayi",12,"2018 Kenya (Busia, Bungoma, Kakamega & Vihiga Counties"
+KEN2018-10,2018-02-23,"Muilulu, Ebusamia",12,"2018 Kenya (Busia, Bungoma, Kakamega & Vihiga Counties"
+KEN2018-11,2018-02-23,"Ebwiranyi, Muhalahala ",12,"2018 Kenya (Busia, Bungoma, Kakamega & Vihiga Counties"
+KEN2018-12,2018-02-24,"Ebuhonga, Kisa",12,"2018 Kenya (Busia, Bungoma, Kakamega & Vihiga Counties"
+TAN2019-01,2019-01-19,Buturi,13,2019 Tanzania (Northern)
+TAN2019-02,2019-01-20,Budeka,13,2019 Tanzania (Northern)
+TAN2019-03,2019-01-21,Kisesa,13,2019 Tanzania (Northern)
+TAN2019-04,2019-01-22,Kagera Bukoba,13,2019 Tanzania (Northern)
+TAN2019-05,2019-01-24,Nzali,13,2019 Tanzania (Northern)
+ZAN2020-01,2020-02-16,Bi Kidude,14,2020 Zanzibar & Pemba
+ZAN2020-02,2020-02-17,Stonetown,14,2020 Zanzibar & Pemba
+ZAN2020-03,2020-02-18,Stonetown,14,2020 Zanzibar & Pemba
+ZAN2020-04,2020-02-19,Maruhabi Palace,14,2020 Zanzibar & Pemba
+ZAN2020-05,2020-02-20,DCMA Stonetown,14,2020 Zanzibar & Pemba
+KEN2022-01,2022-03-07,"Small Matters Park, Shikangania",15,2022 Kenya (Western)
+KEN2022-02,2022-03-07,"Kibukosya’s Gazebo, Mukumu",15,2022 Kenya (Western)
+KEN2022-03,2022-03-08,"Josephine Garden, Ilesi",15,2022 Kenya (Western)
+KEN2022-04,2022-03-09,"Dunga Hill Camp, Kisumu",15,2022 Kenya (Western)
+KEN2022-05,2022-03-10,"Treat House Resort, Rongo",15,2022 Kenya (Western)
+RWA2023-01,2023-11-22,Century Park Hotel (Kigali City),16,2023 Rwanda
+RWA2023-02,2023-11-23,"Highland Suites Hotel, Kigali",16,2023 Rwanda
+RWA2023-03,2023-11-23,"Gikondo, Kigali",16,2023 Rwanda
+RWA2023-04,2023-11-24,Butare,16,2023 Rwanda
+RWA2023-05,2023-11-26,"Highland Suites Hotel, Kigali",16,2023 Rwanda
+RWA2023-06,2023-11-26,Nyamirabo,16,2023 Rwanda
+RWA2023-07,2023-11-27,"Gikondo, Jado’s studio, Kigali",16,2023 Rwanda
+RWA2023-08,2023-11-27,"Gikondo, Jado’s studio, Kigali",16,2023 Rwanda
