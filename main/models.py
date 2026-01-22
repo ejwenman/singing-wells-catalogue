@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class FieldTrip(models.Model):
-    archive_id = models.CharField(max_length=3, unique=True)
+    archive_id = models.CharField(max_length=50, unique=True)
     year = models.IntegerField()
     country = models.CharField(max_length=50)
     region = models.CharField(max_length=255, blank=True, null=True)
