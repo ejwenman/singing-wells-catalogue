@@ -1,4 +1,4 @@
-archive_id,date,location,field_trip,field_trip description (not used for import)
+archive_id,date,location,field_trip_id,field_trip description (not used for import)
 KEN2011A-01,2011-03-29,Sita,1,2011 Kenya (Coastal Region)
 KEN2011A-02,2011-03-30,Kibrani,1,2011 Kenya (Coastal Region)
 KEN2011A-03,2011-03-30,Junda,1,2011 Kenya (Coastal Region)
